@@ -41,10 +41,10 @@ def lambda_handler(event, context):
             resize_image(download_path, upload_path, size)
             s3_client.upload_file(upload_path, 'productsimage', '{}/{}/{}'.format(storeName, size,imageName))
 
-dummyEvent = {
-    "records": [{
-        "image": "1"
-    }]
-}  
+# dummyEvent = {
+#     "records": [{
+#         "image": "1"
+#     }]
+# }  
 
-lambda_handler(dummyEvent, 0)
+# lambda_handler(dummyEvent, 0)
